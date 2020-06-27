@@ -4,7 +4,7 @@ import warnings
 warnings.filterwarnings('ignore')
 import keras
 import glob
-
+#for every image, 3 new images are formed. Rotation, Zooming and Horizontal Flipping is implemented in this code. Seperate code for adding Gaussian Noise.
 for img in glob.glob("C:\\Users\\joshi\\OneDrive\\Desktop\\NIT Surat\\COVID-CT-master\\Data\\Train\\NON-COVID"):
     p = Augmentor.Pipeline(img)
     p.rotate(probability=1, max_left_rotation=10, max_right_rotation=10)
